@@ -1,4 +1,5 @@
 /* Fondo de la pagina*/
+/* Color de fondo base para toda la página */
 *{
     background-color: #ffe0ae;
 }
@@ -18,7 +19,7 @@ h1{
     color: #7e2929;
 }
 
-/*Barra de botones*/
+/*Barra de botones/Navegación entre páginas*/
 .busqueda{
     text-align: center;  
     border: 2px solid black;
@@ -28,7 +29,7 @@ h1{
 
 /*espacio que separa los botones*/
 .bota{
-    margin: 40px; 
+    margin: 40px;
 }
 
 /*cambio de color cuando se pasa el mouse por el boton*/
@@ -48,8 +49,10 @@ h1{
 
 /*subtitulos de cada pagina*/
 .subt{
-    font-family: sans-serif;
+    font-family: monospace;
     font-size: 40px;
+    color: #7e2929;
+    text-align: center;
 }
 
 /*propiedades de las imagenes de lso platos*/
@@ -57,6 +60,22 @@ h1{
     font-family: sans-serif;
     font-size: 30px;
     margin: 15px 0px;
+    color: black;
+}
+
+/*descripcion de lso platos*/
+.descrip {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 5px 0px 15px 0px;
+    color: #555555;
+}
+
+.orpla {
+    font-family: sans-serif;
+    font-size: 30px;
+    margin: 15px 0px;
+    color: black;
 }
 
 /*centrar los platos*/
@@ -75,10 +94,21 @@ ul{
     vertical-align: top;
 }
 
+/* Efecto para resaltar la caja al pasar el cursor sobre ella */
+.caja:hover, .caja:hover * {
+    background-color: #ffe0ae;
+}
+
+.caja:hover {
+    border: 2px solid #7e2929;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
+}
+
 /*acomodar las imagenes dentro de las cajas*/
 .caja img{
-    width: 150px;
-    height: 100px;
+    width: 180px;
+    height: 120px;
     object-fit: contain;
 }
 
@@ -94,6 +124,7 @@ ul{
     font-family: sans-serif;
     font-size: 30px;
     margin: 15px 0px;
+    color: black;
 }
 
 /*botones de acciones en administrador y mesero*/
@@ -120,11 +151,6 @@ table{
     margin: 0 auto;
 }
 
-.even{
-    font-family: sans-serif;
-    font-size: 30px;
-}
-
 .bott{
     font-family: sans-serif;
     font-size: 20px;
@@ -133,7 +159,7 @@ table{
 }
 
 .bott:hover{
-    background-color: #f3bf6c;
+    background-color: #6cabf3;
     color: black;
     border: 2px solid black;
 }
@@ -180,17 +206,17 @@ tbody tr {
     color: #222222;
     background-color: #f4d097;
 }
- 
+
 tbody tr:nth-child(-n+4),
 tbody tr:nth-child(-n+4) td {
     background-color: #ffb700;
     font-weight: bold;
 }
-  
+
 /* Al pasar el mouse por las 3 primeras filas (las más vendidas), se ve un
 tono más fuerte */
 tbody tr:nth-child(-n+4):hover,
 tbody tr:nth-child(-n+4):hover td {
     background-color: #63dc67;
 }
- 
+
