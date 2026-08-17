@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mesero</title>
+    <link rel="stylesheet" href="../CSS/stilo.css">
+    <link rel="icon" href="../img/icon.png" type="image/png">
+    <script src="../JS/mesero.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Cooperativa Marrana</h1>
+    </header>
+    <!--Uso del nav para navegar entre páginas
+        Consiste en referenciar los botones con el hmtl correspondiente-->
+    <nav class="busqueda">
+        <a class="bota" href="index.html"><button class="bot">Menú</button></a>
+        <a class="bota" href="co.html"><button class="bot">Cocina</button></a>
+        <a class="bota" href="admin.html"><button class="bot">Administrador</button></a>
+    </nav>
+    <h2 class="subt">Realizar pedido</h2>
+    <!--Se usó select de una sola opción para que se pueda escoger un solo plato. -->
+    <form>
+      <p class="orpla">Números de platos a pedir:</p>
+      <input class="botm" id ="platos" type="number" name="platos" min="1" max="10"/>
+      <div id="nPlatos"></div>
+    </form>
+    <!--En el caso del total, se usó un valor quemado-->
+    <h4 class="total">Total:</h4>
+    <p class="precio">50000</p>
+  </body>
+</html>

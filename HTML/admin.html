@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Reservas</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../CSS/stilo.css">
+        <link rel="icon" href="../img/icon.png" type="image/png">
+        <script src="../JS/reservas.js" defer></script>
+    </head>
+    <body>
+            <header>
+                <h1>Cooperativa Marrana</h1>
+            </header>
+            <!--Uso del nav para navegar entre páginas
+            Consiste en referenciar los botones con el hmtl correspondiente-->
+            <nav class="busqueda">
+                <a class="bota" href="index.html"><button class="bot">Menú</button></a>
+                <a class="bota" href="me.html"><button class="bot">Mesero</button></a>
+                <a class="bota" href="co.html"><button class="bot">Cocina</button></a>
+            </nav>
+            <br>
+            <form>
+                <p class="orpla">¿Para cuántas personas desea realizar la reserva?</p>
+                <input class="botm" id ="personas" type="number" name="personas" min="1" max="10"/>
+                <div id="edades"></div>
+                <br>
+                <p class="orpla">¿Que tipo de evento es?</p>
+                <select class="botm" name="tipo_evento">
+                    <option class="meo" value="cumpleaños">Cumpleaños</option>
+                    <option class="meo" value="evento_trabajo">Evento de Trabajo</option>
+                    <option class="meo" value="evento_familiar">Evento Familiar</option>
+                </select>
+                <br>
+                <br>
+                <input class="bott" type="submit" name="reservar" value="Reservar"/>
+            </form>
+    </body>
+</html>
