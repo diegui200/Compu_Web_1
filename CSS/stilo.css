@@ -1,3 +1,4 @@
+/* Fondo de la pagina*/
 *{
     background-color: #ffe0ae;
 }
@@ -10,6 +11,7 @@ h1{
     color: #7e2929;
 }
 
+/*Barra de botones*/
 .busqueda{
     text-align: center;  
     border: 2px solid black;
@@ -17,16 +19,19 @@ h1{
     padding: 30px;
 }
 
+/*espacio que separa los botones*/
 .bota{
     margin: 40px; 
 }
 
+/*cambio de color cuando se pasa el mouse por el boton*/
 .bot:hover{
     background-color: #ffe0ae;
     color: black;
     border: 2px solid black;
 }
 
+/*botones de la barra de roles*/
 .bot{
     font-family: sans-serif;
     font-size: 30px;
@@ -34,21 +39,26 @@ h1{
     background-color: #ffb742;
 }
 
+/*subtitulos de cada pagina*/
 .subt{
     font-family: sans-serif;
     font-size: 40px;
 }
+
+/*propiedades de las imagenes de lso platos*/
 .plato{
     font-family: sans-serif;
     font-size: 30px;
     margin: 15px 0px;
 }
 
+/*centrar los platos*/
 ul{
     padding: 20px;
     text-align: center;
 }
 
+/*bordes de los platos*/
 .caja{
     display: inline-block;
     margin: 20px;
@@ -57,6 +67,8 @@ ul{
     height: 300px;
     vertical-align: top;
 }
+
+/*acomodar las imagenes dentro de las cajas*/
 .caja img{
     width: 150px;
     height: 100px;
@@ -70,12 +82,14 @@ ul{
     margin: 15px 0px;
 }
 
+/*textos de preguntas*/
 .orpla{
     font-family: sans-serif;
     font-size: 30px;
     margin: 15px 0px;
 }
 
+/*botones de acciones en administrador y mesero*/
 .botm{
     font-family: sans-serif;
     font-size: 20px;
@@ -83,23 +97,8 @@ ul{
     background-color: #ff9100;
 }
 
+/*cuando se abre tipo de evento, el color con el que sale las opciones*/
 .meo{
-    background-color: #ffb742;
-}
-
-#form1{
-    background-color: #ffb742;  
-}
-
-fieldset{
-    border: 2px solid black;
-    background-color: #ffb742; 
-}
-
-#orpla1{
-    font-family: sans-serif;
-    font-size: 30px;
-    margin: 15px 0px;
     background-color: #ffb742;
 }
 
@@ -135,7 +134,7 @@ table{
 td{
     text-align: center;
 }
--
+
 /* Tabla de platos más vendidos (co.html) */
 table {
     width: 800px; 
