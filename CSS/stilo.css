@@ -3,6 +3,13 @@
     background-color: #ffe0ae;
 }
 
+/* Mensajes de error en el formulario de mesero */
+.error{
+    color: red;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
 /* Encabezado */
 h1{
     font-family: monospace;
