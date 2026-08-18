@@ -1,12 +1,14 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Cooperativa marrana</title>
         <link rel="stylesheet" href="../CSS/stilo.css">
         <link rel="icon" href="../img/icon.png" type="image/png">
+        <script src="../JS/menu.js" defer></script>
     </head>
     <body>
-        <!--Se crea un header exclusivo por si se quiere modificar mas parte de 
+        <!--Se crea un header exclusivo por si se quiere modificar mas parte de
         esta area sola o agregar elementos-->
         <header>
                 <h1>Cooperativa Marrana</h1>
@@ -14,81 +16,102 @@
         <!--Uso del nav para navegar entre páginas
         Consiste en referenciar los botones con el hmtl correspondiente-->
     <nav class="busqueda">
-        <a class="bota" href="me.html"><button class="bot">Mesero</button></a>
-        <a class="bota" href="co.html"><button class="bot">Cocina</button></a>
-        <a class="bota" href="admin.html"><button class="bot">Administrador</button></a>
+        <a class="bott" href="me.html"><button class="bot">Mesero</button></a>
+        <a class="bott" href="co.html"><button class="bot">Cocina</button></a>
+        <a class="bott" href="admin.html"><button class="bot">Administrador</button></a>
     </nav>
         <br>
-        <h2 class="subt">Comida</h2>
-        <!--Se usa una lista no ordenada para mostrar los platos y las bebidas que 
-        ofrecemos en nuestro menú-->
-        <ul id="menuComida">
-            <li class="caja" >
+
+        <!--Buscador del menú: Javascript filtra por nombre mientras se escribe-->
+        <p class="orpla">Buscar plato o bebida</p>
+        <input class="botm" type="text" id="buscarPlato" placeholder="Ej: Pizza...">
+        <button class="bott" id="btnBuscar" type="button">Buscar</button>
+
+        <!--Botones de categoría: cada uno llama a filtrarPorCategoria()-->
+        <div class="filtro-categorias">
+            <button class="bott" id="btnTodos" type="button">Todos</button>
+            <button class="bott" id="btnAlmuerzo" type="button">Almuerzo</button>
+            <button class="bott" id="btnPlatoFuerte" type="button">Plato fuerte</button>
+            <button class="bott" id="btnComidaRapida" type="button">Comida rápida</button>
+            <button class="bott" id="btnBebida" type="button">Bebida</button>
+        </div>
+
+        <h2 class="subt">Menú</h2>
+        <!--Cada plato/bebida está escrito directo aca, con data-categoria
+        para que Javascript sepa a cual categoría pertenece-->
+        <ul id="menuContenedor">
+            <li class="caja" data-categoria="almuerzo">
                 <p class="plato">Pollo asado</p>
+                <p class="descrip">Pollo entero asado a la parrilla con hierbas de la casa.</p>
                 <br>
-                <img src="../img/pollo.jpeg" width="150px">
+                <img src="../img/pollo.jpeg" width="150px" alt="Pollo asado">
                 <p class="precio">$30.000</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="comida rapida">
                 <p class="plato">Hamburguesa</p>
+                <p class="descrip">Carne de res, queso cheddar, lechuga y tomate en pan brioche.</p>
                 <br>
-                <img src="../img/ham.jpg" width="150px">
+                <img src="../img/ham.jpg" width="150px" alt="Hamburguesa">
                 <p class="precio">$18.000</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="plato fuerte">
                 <p class="plato">Sushi</p>
+                <p class="descrip">Selección de rolls variados con salsa de soya y wasabi.</p>
                 <br>
-                <img src="../img/sus.jpg" width="150px">
+                <img src="../img/sus.jpg" width="150px" alt="Sushi">
                 <p class="precio">$27.500</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="comida rapida">
                 <p class="plato">Pizza</p>
+                <p class="descrip">Pizza artesanal con queso mozzarella y salsa napolitana.</p>
                 <br>
-                <img src="../img/pi.jpg" width="150px">
+                <img src="../img/pi.jpg" width="150px" alt="Pizza">
                 <p class="precio">$8.000</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="comida rapida">
                 <p class="plato">Perro Caliente</p>
+                <p class="descrip">Salchicha americana, papas fritas y salsas de la casa.</p>
                 <br>
-                <img src="../img/hot.jpg" width="150px">
+                <img src="../img/hot.jpg" width="150px" alt="Perro Caliente">
                 <p class="precio">$12.000</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="comida rapida">
                 <p class="plato">Salchipapa</p>
+                <p class="descrip">Papas fritas con trozos de salchicha y salsas mixtas.</p>
                 <br>
-                <img src="../img/sal.jpg" width="150px">
+                <img src="../img/sal.jpg" width="150px" alt="Salchipapa">
                 <p class="precio">$15.000</p>
-                
             </li>
-        </ul>
-        <h2 class="subt">Bebidas</h2>
-        <ul id="menuBebidas">
-            <li class="caja">
+            <li class="caja" data-categoria="bebida">
                 <p class="plato">Gaseosa</p>
+                <p class="descrip">Bebida gaseosa fría, 350 ml.</p>
                 <br>
-                <img src="../img/gp.png" width="150px">
+                <img src="../img/gp.png" width="150px" alt="Gaseosa">
                 <p class="precio">$5.000</p>
             </li>
-
-            <li class="caja">
+            <li class="caja" data-categoria="bebida">
                 <p class="plato">Cerveza aguila</p>
+                <p class="descrip">Cerveza nacional, 330 ml.</p>
                 <br>
-                <img src="../img/agu.png" width="150px">
+                <img src="../img/agu.png" width="150px" alt="Cerveza aguila">
                 <p class="precio">$5.000</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="bebida">
                 <p class="plato">Cerveza Poker</p>
+                <p class="descrip">Cerveza nacional, 330 ml.</p>
                 <br>
-                <img src="../img/pok.png" width="150px">
+                <img src="../img/pok.png" width="150px" alt="Cerveza Poker">
                 <p class="precio">$5.000</p>
             </li>
-            <li class="caja">
+            <li class="caja" data-categoria="bebida">
                 <p class="plato">Botella Agua</p>
+                <p class="descrip">Agua embotellada, sin gas 500 ml.</p>
                 <br>
-                <img src="../img/wata.webp" width="150px">
+                <img src="../img/wata.webp" width="150px" alt="Botella Agua">
                 <p class="precio">$5.000</p>
             </li>
         </ul>
+
         <footer>
             <p></p>
         </footer>

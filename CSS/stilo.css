@@ -4,19 +4,28 @@
     background-color: #ffe0ae;
 }
 
-/* Mensajes de error en el formulario de mesero */
-.error{
-    color: red;
+/*Tiporafia de los parrafos*/
+p{
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
 }
 
-/* Encabezado */
+/* ENCABEZADO */
 h1{
     font-family: monospace;
-    font-size: 50px;
+    font-size: 90px;
     text-align: center;
     color: #7e2929;
+}
+
+/*subtitulos de cada pagina*/
+.subt{
+    font-family: monospace;
+    font-size: 70px;
+    color: #7e2929;
+    text-align: center;
 }
 
 /*Barra de botones/Navegación entre páginas*/
@@ -27,32 +36,113 @@ h1{
     padding: 30px;
 }
 
-/*espacio que separa los botones*/
-.bota{
-    margin: 40px;
+/*BOTONES*/
+/*botones de acciones en administrador, mesero, menu*/
+/*espacio que separa los botones: antes decia ".bota.bott.botm" (las 3 clases
+a la vez, cosa que nunca pasa) - con comas aplica a cada clase por separado*/
+.bota, .bott, .botm{
+    margin: 30px;
 }
 
-/*cambio de color cuando se pasa el mouse por el boton*/
-.bot:hover{
-    background-color: #ffe0ae;
-    color: black;
-    border: 2px solid black;
-}
-
-/*botones de la barra de roles*/
-.bot{
+/*botones de la barra de roles Y botones de acción (categorías, reservar,
+calcular) - mismo estilo para que se vean consistentes en todo el proyecto*/
+.bot, .bott{
     font-family: sans-serif;
     font-size: 30px;
     padding: 30px;
     background-color: #ffb742;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
-/*subtitulos de cada pagina*/
-.subt{
-    font-family: monospace;
-    font-size: 40px;
-    color: #7e2929;
+/*cambio de color cuando se pasa el mouse por el boton: antes decia
+".bota.bott:hover" (exigia las 2 clases juntas, cosa que nunca pasa) - se
+separa en .bot:hover (botones del nav) y .bott:hover (botones de accion)*/
+.bot.bott{
+    font-family: sans-serif;
+    font-size: 25px;
+    padding: 5px;
+    background-color: #6cabf3;
+    color: black;
+    border: 2px solid black;
+}
+
+.botm{
+    font-family: sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    background-color: #efc55c;
+}
+
+.button{
+    font-family: sans-serif;
+    font-size: 10px;
+    padding: 5px;
+    background-color: #526ede;
+}
+
+/*cuando se abre tipo de evento, el color con el que sale las opciones*/
+.meo{
+    background-color: #ffb742;
+}
+
+/*Botones de filtro por categoría del menú (btnTodos, btnAlmuerzo, etc.)*/
+.filtro-categorias {
     text-align: center;
+    margin: 20px 0px;
+}
+
+.botCat {
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 18px;
+    margin: 5px;
+    background-color: #ffb742;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.botCat:hover {
+    background-color: #6cabf3;
+    border: 2px solid #7e2929;
+}
+
+/*MENU*/
+
+/*centrar los platos*/
+ul{
+    padding: 20px;
+    text-align: center;
+}
+
+/*bordes de los platos*/
+.caja{
+    display: inline-block;
+    margin: 20px;
+    border: 2px solid black;
+    width: 220px;
+    height: 350px;
+    vertical-align: top;
+}
+
+.caja:hover {
+    border: 2px solid #7e2929;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Efecto para resaltar la caja al pasar el cursor sobre ella */
+.caja:hover, .caja:hover * {
+    background-color: #ed915b;
+}
+
+/*acomodar las imagenes dentro de las cajas*/
+.caja img{
+    width: 180px;
+    height: 120px;
+    object-fit: contain;
 }
 
 /*propiedades de las imagenes de lso platos*/
@@ -66,50 +156,9 @@ h1{
 /*descripcion de lso platos*/
 .descrip {
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     margin: 5px 0px 15px 0px;
     color: #555555;
-}
-
-.orpla {
-    font-family: sans-serif;
-    font-size: 30px;
-    margin: 15px 0px;
-    color: black;
-}
-
-/*centrar los platos*/
-ul{
-    padding: 20px;
-    text-align: center;
-}
-
-/*bordes de los platos*/
-.caja{
-    display: inline-block;
-    margin: 20px;
-    border: 2px solid black;
-    width: 200px;
-    height: 300px;
-    vertical-align: top;
-}
-
-/* Efecto para resaltar la caja al pasar el cursor sobre ella */
-.caja:hover, .caja:hover * {
-    background-color: #ffe0ae;
-}
-
-.caja:hover {
-    border: 2px solid #7e2929;
-    transform: translateY(-10px);
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
-}
-
-/*acomodar las imagenes dentro de las cajas*/
-.caja img{
-    width: 180px;
-    height: 120px;
-    object-fit: contain;
 }
 
 .precio{
@@ -119,25 +168,20 @@ ul{
     margin: 15px 0px;
 }
 
-/*textos de preguntas*/
-.orpla{
-    font-family: sans-serif;
-    font-size: 30px;
-    margin: 15px 0px;
-    color: black;
-}
-
-/*botones de acciones en administrador y mesero*/
-.botm{
+/*FORMULARIOS*/
+/* Mensajes de error en el formulario de mesero */
+.error{
+    color: red;
     font-family: sans-serif;
     font-size: 20px;
-    padding: 5px;
-    background-color: #ff9100;
 }
 
-/*cuando se abre tipo de evento, el color con el que sale las opciones*/
-.meo{
-    background-color: #ffb742;
+/* Textos de preguntas */
+.orpla {
+    font-family: sans-serif;
+    font-size: 45px;
+    margin: 15px 0px;
+    color: black;
 }
 
 .total{
@@ -146,45 +190,26 @@ ul{
     margin: 15px 0px;
 }
 
-table{
-    background-color: #ac6a00;
-    margin: 0 auto;
-}
-
-.bott{
-    font-family: sans-serif;
-    font-size: 20px;
-    padding: 5px;
-    background-color: #ff9100;
-}
-
-.bott:hover{
-    background-color: #6cabf3;
-    color: black;
-    border: 2px solid black;
-}
-
-td{
-    text-align: center;
-}
-
-/* Tabla de platos más vendidos (co.html) */
+/*TABLAS*/
+/* Estructura general de la tabla */
 table {
     width: 800px; 
-    table-layout: fixed; /* evita que el texto largo empuje la tabla más allá de 600px */
+    table-layout: fixed;
     border-collapse: collapse;
     margin: 0 auto;
-    background-color: #0f9332;
+    background-color: #0f9332; /* Fondo de respaldo verde */
 }
 
+/* Celdas generales */
 th, td {
     padding: 7px 10px 10px 10px;
-    border: 2px solid;
+    border: 2px solid black;
     color: black;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
+/* Encabezados de tabla */
 th {
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -196,6 +221,7 @@ th {
     background-color: #f4d097;
 }
 
+/* Centrar columna de precio */
 td:nth-child(3) {
     text-align: center;
 }
@@ -207,16 +233,15 @@ tbody tr {
     background-color: #f4d097;
 }
 
+/* Destacar las primeras 4 filas (Más vendidos) */
 tbody tr:nth-child(-n+4),
 tbody tr:nth-child(-n+4) td {
     background-color: #ffb700;
     font-weight: bold;
 }
 
-/* Al pasar el mouse por las 3 primeras filas (las más vendidas), se ve un
-tono más fuerte */
+/* Efecto hover para las primeras 4 filas */
 tbody tr:nth-child(-n+4):hover,
 tbody tr:nth-child(-n+4):hover td {
     background-color: #63dc67;
 }
-
