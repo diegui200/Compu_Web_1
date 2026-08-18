@@ -87,6 +87,7 @@ nPlatosInput.addEventListener("change", function () {
         inputCantidad.max = 100;               // máximo 100 platos
         inputCantidad.name = "cantidad_plato_" + i;
         inputCantidad.id = "cantidadPlato_" + i;
+        inputCantidad.classList.add("botm");
 
         // --- Agregar todos los elementos al contenedor ---
         contenedorPlatos.appendChild(document.createElement("br"));
@@ -141,6 +142,8 @@ nBebidasInput.addEventListener("change", function () {
         inputCantidad.max = 100;
         inputCantidad.name = "cantidad_bebida_" + i;
         inputCantidad.id = "cantidadBebida_" + i;
+        inputCantidad.classList.add("botm");
+
 
         // --- Agregar todos los elementos al contenedor ---
         contenedorBebidas.appendChild(document.createElement("br"));
